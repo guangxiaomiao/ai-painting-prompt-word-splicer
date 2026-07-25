@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+venv/
+.venv/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Data files (auto-generated user data)
+src/data/
+
+# Backup
+src/models/备份/
