@@ -1,0 +1,127 @@
+2026-06-22 18:10:13,495 - __main__ - ERROR - Application failed to start: Instance <Settings at 0x23e2ce63250> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+Traceback (most recent call last):
+  File "E:\我的九儿猫\绘画提示辅助器\main.py", line 22, in <module>
+    app = App(sys.argv)
+  File "E:\我的九儿猫\绘画提示辅助器\src\app.py", line 279, in __init__
+    self.window = MainWindow()
+                  ~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\app.py", line 35, in __init__
+    if self.settings.auto_save:
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gggg\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\attributes.py", line 569, in __get__
+    return self.impl.get(state, dict_)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\gggg\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1096, in get
+    value = self._fire_loader_callables(state, key, passive)
+  File "C:\Users\gggg\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\attributes.py", line 1126, in _fire_loader_callables
+    return state._load_expired(state, passive)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\gggg\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state.py", line 828, in _load_expired
+    self.manager.expired_attribute_loader(self, toload, passive)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gggg\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\loading.py", line 1607, in load_scalar_attributes
+    raise orm_exc.DetachedInstanceError(
+    ...<2 lines>...
+    )
+sqlalchemy.orm.exc.DetachedInstanceError: Instance <Settings at 0x23e2ce63250> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2026-06-22 18:12:23,649 - __main__ - ERROR - Application failed to start: Error calling Python override of QAbstractItemModel::rowCount(): Error calling Python override of QAbstractItemModel::rowCount(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): 'CategoryTreeNode' object is not callable
+Traceback (most recent call last):
+  File "E:\我的九儿猫\绘画提示辅助器\main.py", line 22, in <module>
+    app = App(sys.argv)
+  File "E:\我的九儿猫\绘画提示辅助器\src\app.py", line 279, in __init__
+    self.window = MainWindow()
+                  ~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\app.py", line 31, in __init__
+    self.initUI()
+    ~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\app.py", line 84, in initUI
+    self.applyTheme()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\app.py", line 235, in applyTheme
+    self.setStyleSheet('''
+    ~~~~~~~~~~~~~~~~~~^^^^
+        QMainWindow { background-color: #2b2b2b; }
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        QPushButton:hover { background-color: #555555; }
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ''')
+    ^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 65, in rowCount
+    if parent.column() > 0:
+       ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 65, in rowCount
+    if parent.column() > 0:
+       ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 53, in parent
+    if not index.isValid():
+           ~~~~~~~~~~~~~^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 39, in index
+    if not self.hasIndex(row, column, parent):
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\我的九儿猫\绘画提示辅助器\src\views\category_tree.py", line 57, in parent
+    parent_item = child_item.parent()
+TypeError: Error calling Python override of QAbstractItemModel::rowCount(): Error calling Python override of QAbstractItemModel::rowCount(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): Error calling Python override of QAbstractItemModel::index(): Error calling Python override of QAbstractItemModel::parent(): 'CategoryTreeNode' object is not callable
